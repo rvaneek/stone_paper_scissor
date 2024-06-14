@@ -1,0 +1,144 @@
+* {
+	box-sizing: border-box;
+	font-family: "MV Boli", serif;
+	margin: 0;
+	padding: 0;
+}
+
+
+body {
+	width: 100vw;
+	height: 100vh;
+}
+
+.container {
+	& {
+		display: flex;
+		flex-direction: column;
+		width: 100vw;
+		height: 100vh;
+		background: #000;
+		justify-content: space-between;
+		padding: 100px;
+		color: white;
+		overflow: hidden;
+	}
+
+	& .Title {
+		top: 10px;
+		left: 0;
+		width: 100vw;
+		position: absolute;
+		text-align: center;
+		font-size: 50px;
+	}
+
+	& .Score_Board {
+		margin: auto;
+		padding: 15px;
+		width: 500px;
+		height: 230px;
+		display: flex;
+		justify-content: space-between;
+		border: 1px solid white;
+		border-radius: 25px;
+		gap: 15px;
+
+		& > div {
+			/*padding: 1px;*/
+			/*margin: 2px;*/
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			justify-content: center;
+			text-align: center;
+			gap: 15px;
+
+			& h1 {
+				font-size: 45px;
+				font-weight: 900;
+				border-radius: 15px 15px 0 0;
+				border: 1px solid white;
+			}
+
+			& h2 {
+				border-radius: 0 0 15px 15px;
+				border: 1px solid white;
+				font-size: 70px;
+			}
+		}
+	}
+}
+
+.buttons {
+	display: flex;
+	justify-content: space-evenly;
+	width: 500px;
+	margin: auto;
+}
+
+.opt {
+	& {
+		width: 100px;
+		height: 100px;
+		border-radius: 50px;
+		background: #000;
+		border: 0.01px solid white;
+		overflow: hidden;
+	}
+
+	&:hover {
+		background-color: #FFFFFF47;
+		scale: 1.06;
+	}
+
+	& img {
+		position: relative;
+		width: 62%;
+	}
+}
+
+.scissor img {
+	top: -8px;
+}
+
+.paper img {
+	top: -12px;
+}
+
+.rock img {
+	top: -32px;
+	width: 68%;
+}
+
+.Hands {
+	/*width: 100vw;*/
+	/*position: fixed;*/
+
+	& .AI {
+		position: absolute;
+		top: 100vh;
+		left: 7vw;
+
+		& img {
+			position: fixed;
+			top: 90vh;
+		}
+	}
+
+	& .Player {
+		position: absolute;
+		top: 100vh;
+		left: 80vw;
+
+		& img {
+			position: fixed;
+			top: 90vh;
+		}
+	}
+}
+
+/*.Hands .AI .rock{*/
+/*	border: black solid 1px;*/
+/*	!*background: black;*!*/
+/*}*/
